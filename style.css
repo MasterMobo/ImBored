@@ -82,6 +82,7 @@ body {
 
 #track {
     display: flex;
+    width: 200vw;
     gap: 4vmin;
     position: absolute;
     margin-top: 10%;
@@ -92,23 +93,20 @@ body {
 #track>.block {
     border: 1.5px solid rgba(220, 210, 252, 0.507);
     width: 300px;
-    /* height: calc(100vh - 350px); */
     height: max(60vh, 200px);
     border-radius: 20px;
     object-position: center;
     margin-left: auto;
     margin-right: auto;
-    transition: transform .3s ease-in, background-color .15s ease-in;
+    transition: transform .3s ease-in, background-color .15s ease-in, flex-grow .5s ease-out;
 }
 
 .block:hover {
     background-color: rgb(215, 206, 245);
     transform: translate(0,-5%);
+    flex-grow: 1;
 }
 
-.block:not(:hover) {
-    background-color: "";
-}
 
 .block>.block_img {
     display: block;
